@@ -1,5 +1,4 @@
----
-- hosts: localhost
+- hosts: all
   tasks:
     - include_tasks: "system-fonts.yml"
     - include_tasks: "system-alacritty.yml"

@@ -1,5 +1,4 @@
----
-- hosts: localhost
+- hosts: all
   tasks:
     - include_tasks: "pacman-install.yml"
     - include_tasks: "github-install.yml"
