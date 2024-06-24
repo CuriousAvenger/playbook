@@ -1,3 +1,4 @@
+---
 - name: "install system fonts"
   include_tasks: "system-fonts.yml"
 

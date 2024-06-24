@@ -1,3 +1,4 @@
+---
 - name: "install base packages from pacman"
   include_tasks: "pacman-install.yml"
 

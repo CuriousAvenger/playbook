@@ -4,7 +4,7 @@
     repo: "https://aur.archlinux.org/yay.git"
     dest: "/tmp/yay"
   become: yes
-  become_method: "{{ ansible_user_id }}"
+  become_user: "{{ ansible_user_id }}"
 
 - name: "build and install yay"
   command: "makepkg -si --noconfirm"
