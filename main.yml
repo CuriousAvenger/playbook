@@ -1,7 +1,0 @@
----
-- name: "Arch Linux Build"
-  hosts: localhost
-  connection: local
-  roles:
-    - role: "roles/install-packages"
-    - role: "roles/customize-system"
