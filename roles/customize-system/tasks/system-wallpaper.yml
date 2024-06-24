@@ -1,0 +1,18 @@
+---
+- name: "create local Pictures directory"
+  file:
+    path: "~/Pictures"
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: "copy configuration file"
+  copy:
+    src: "files/themes/Wallpaper.png"
+    dest: "~/Pictures/Wallpaper.png"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+  become: yes
+  become_user: "{{ ansible_user_id }}"

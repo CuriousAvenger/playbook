@@ -1,0 +1,3 @@
+---
+- include: "pacman-install.yml"
+- include: "github-install.yml"

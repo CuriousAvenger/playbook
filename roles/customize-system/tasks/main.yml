@@ -1,0 +1,9 @@
+---
+- include: "system-fonts.yml"
+- include: "system-alacritty.yml"
+- include: "system-polybar.yml"
+- include: "system-rofi.yml"
+- include: "system-picom.yml"
+- include: "system-wallpaper.yml"
+- include: "system-i3.yml"
+- include: "system-bashrc.yml"

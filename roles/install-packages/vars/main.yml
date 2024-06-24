@@ -1,0 +1,24 @@
+---
+base_packages:
+  - wget
+  - curl
+  - vim
+  - git
+  - unzip
+  - zip
+  - python3
+  - ruby
+  - npm
+  - tmux
+  - xorg
+  - net-tools
+  - base-devel
+  - firefox
+
+env_packages:
+  - alacritty
+  - polybar
+  - rofi
+  - picom
+  - neofetch
+  - feh

@@ -1,0 +1,26 @@
+---
+- name: "update pacman repo/cache"
+  pacman:
+    update_cache: yes
+  become: yes
+  become_method: sudo
+
+- name: "upgrade all packages"
+  pacman:
+    upgrade: yes
+  become: yes
+  become_method: sudo
+
+- name: "install base packages"
+  pacman:
+    name: "{{ base_packages }}"
+    state: present
+  become: yes
+  become_method: sudo
+
+- name: "install env packages"
+  pacman:
+    name: "{{ env_packages }}"
+    state: present
+  become: yes
+  become_method: sudo

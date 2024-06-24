@@ -1,0 +1,23 @@
+---
+- name: "create local fonts directory"
+  file:
+    path: "~/.local/share/fonts"
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: "unzip and copy font"
+  unarchive:
+    src: "files/fonts/JetBrainsMono.zip"
+    dest: "~/.local/share/fonts"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: "update font cache"
+  command: fc-cache -f -v
+  become: yes
+  become_user: "{{ ansible_user_id }}"

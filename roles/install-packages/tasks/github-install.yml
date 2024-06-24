@@ -1,0 +1,21 @@
+---
+- name: "clone yay repository"
+  git:
+    repo: "https://aur.archlinux.org/yay.git"
+    dest: "/tmp/yay"
+  become: yes
+  become_method: "{{ ansible_user_id }}"
+
+- name: "build and install yay"
+  command: "makepkg -si --noconfirm"
+  args:
+    chdir: "/tmp/yay"
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: "clean up yay build directory"
+  file:
+    path: "/tmp/yay"
+    state: absent
+  become: yes
+  become_user: "{{ ansible_user_id }}"

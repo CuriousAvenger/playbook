@@ -1,0 +1,36 @@
+---
+- name: "create local alacritty directory"
+  file:
+    path: "~/.config/alacritty"
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: "create local theme directory"
+  file:
+    path: "~/.local/share/alacritty/themes"
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: Unzip and copy Alacritty themes
+  unarchive:
+    src: "files/themes/alacritty-themes.zip"
+    dest: "~/.local/share/alacritty/themes"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: "copy configuration file"
+  copy:
+    src: "files/config/alacritty.toml"
+    dest: "~/.config/alacritty/alacritty.toml"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+  become: yes
+  become_user: "{{ ansible_user_id }}"
