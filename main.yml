@@ -4,4 +4,4 @@
   connection: local
   roles:
     - role: "roles/install-packages"
-    - roles: "roles/customize-system"
+    - role: "roles/customize-system"
