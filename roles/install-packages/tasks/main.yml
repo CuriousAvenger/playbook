@@ -1,4 +1,5 @@
-- hosts: all
-  tasks:
-    - include_tasks: "pacman-install.yml"
-    - include_tasks: "github-install.yml"
+- name: "install base packages from pacman"
+  include_tasks: "pacman-install.yml"
+
+- name: "install base packages from git"
+  include_tasks: "github-install.yml"

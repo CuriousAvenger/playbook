@@ -1,10 +1,23 @@
-- hosts: all
-  tasks:
-    - include_tasks: "system-fonts.yml"
-    - include_tasks: "system-alacritty.yml"
-    - include_tasks: "system-polybar.yml"
-    - include_tasks: "system-rofi.yml"
-    - include_tasks: "system-picom.yml"
-    - include_tasks: "system-wallpaper.yml"
-    - include_tasks: "system-i3.yml"
-    - include_tasks: "system-bashrc.yml"
+- name: "install system fonts"
+  include_tasks: "system-fonts.yml"
+
+- name: "configure Alacritty terminal"
+  include_tasks: "system-alacritty.yml"
+
+- name: "setup Polybar"
+  include_tasks: "system-polybar.yml"
+
+- name: "configure Rofi"
+  include_tasks: "system-rofi.yml"
+
+- name: "setup Picom compositor"
+  include_tasks: "system-picom.yml"
+
+- name: "set system wallpaper"
+  include_tasks: "system-wallpaper.yml"
+
+- name: "configure i3 window manager"
+  include_tasks: "system-i3.yml"
+
+- name: "configure Bash RC"
+  include_tasks: "system-bashrc.yml"
