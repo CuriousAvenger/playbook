@@ -1,4 +1,11 @@
 ---
+- name: "delete old bashrc file"
+  file:
+    path: "~/.bashrc"
+    state: absent
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+
 - name: "copy configuration file"
   copy:
     src: "files/config/.bashrc"
