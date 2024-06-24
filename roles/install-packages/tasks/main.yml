@@ -1,3 +1,3 @@
 ---
-- include: "pacman-install.yml"
-- include: "github-install.yml"
+- import_playbook: "pacman-install.yml"
+- import_playbook: "github-install.yml"
