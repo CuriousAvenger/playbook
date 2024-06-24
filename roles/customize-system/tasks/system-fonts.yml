@@ -10,7 +10,7 @@
 - name: "unzip and copy font"
   unarchive:
     src: "files/fonts/JetBrainsMono.zip"
-    dest: "~/.local/share/fonts/JetBrainsMono"
+    dest: "~/.local/share/fonts"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     mode: '0644'
