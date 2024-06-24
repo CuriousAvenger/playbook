@@ -1,2 +1,5 @@
-- import_playbook: "pacman-install.yml"
-- import_playbook: "github-install.yml"
+---
+- hosts: localhost
+  tasks:
+    - include_tasks: "pacman-install.yml"
+    - include_tasks: "github-install.yml"

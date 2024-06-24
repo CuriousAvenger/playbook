@@ -1,8 +1,11 @@
-- import_playbook: "system-fonts.yml"
-- import_playbook: "system-alacritty.yml"
-- import_playbook: "system-polybar.yml"
-- import_playbook: "system-rofi.yml"
-- import_playbook: "system-picom.yml"
-- import_playbook: "system-wallpaper.yml"
-- import_playbook: "system-i3.yml"
-- import_playbook: "system-bashrc.yml"
+---
+- hosts: localhost
+  tasks:
+    - include_tasks: "system-fonts.yml"
+    - include_tasks: "system-alacritty.yml"
+    - include_tasks: "system-polybar.yml"
+    - include_tasks: "system-rofi.yml"
+    - include_tasks: "system-picom.yml"
+    - include_tasks: "system-wallpaper.yml"
+    - include_tasks: "system-i3.yml"
+    - include_tasks: "system-bashrc.yml"
