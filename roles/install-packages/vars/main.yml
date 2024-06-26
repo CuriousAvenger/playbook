@@ -19,6 +19,7 @@ env_packages:
   - alacritty
   - polybar
   - rofi
+  - rofi-emoji
   - picom
   - neofetch
   - feh
